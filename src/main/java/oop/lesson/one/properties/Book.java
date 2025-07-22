@@ -14,6 +14,12 @@ public class Book {
     private String title;
     private String author;
     private double price;
+    
+    public Book(String title, String author, double price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
     public void setTitle(String title) {
         this.title = title;
     }
@@ -33,8 +39,9 @@ public class Book {
         return price;
     }
     public static void main(String[] args) {
-        Book test = new Book();
-        test.setTitle("C++ Programming");
-        System.out.println(test.getTitle());
+        Book test = new Book("Java", "John Doe", 20);
+        System.out.println(test.getPrice());
+        test.setPrice(25);
+        System.out.println(test.getPrice());
     }
 }
